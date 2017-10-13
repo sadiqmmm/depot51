@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Your Pragmatic Catalog</h1>
+	
+	<% cache @products do %><!-- products cache start//-->	
+
+		<% @products.each do |product| %>
+
+			<% cache product do %><!-- product cache start //-->	
+				
+				<div class="entry">
+					<%= image_tag(product.image_url) %>
+					
+					<h3><%= product.title %></h3>					
+					
+					<%= sanitize(product.description) %>				
+					
+					<div class="price_line">
+					  <span class="price"><%= number_to_currency(product.price) %></span>  
+					</div>
+				</div>
+				
+			<% end %> <!-- product cache end//-->	
+		<% end %>
+	<% end %>	<!-- products cache end//-->	
