@@ -9,11 +9,19 @@
   </head>
 
   <body class="<%= controller.controller_name %>">  
+    
+    <div id="banner">
+      <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
+      <span class="title"><%= @page_title %></span>
+    </div>
 
-    <%= render "layouts/menu" %>
+    <div id="columns">
+      
+      <%= render "layouts/sidebar" %>
 
-  	<div id="main">
-  		<%= yield %>
-  	</div>    
+    	<div id="main">
+    		<%= yield %>
+    	</div>  
+    </div>  
   </body>
 </html>
