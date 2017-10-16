@@ -33,6 +33,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pg'
+gem 'redis'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
